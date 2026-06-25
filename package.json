@@ -1,7 +1,7 @@
 {
   "name": "mock-preliminary-task",
   "version": "1.0.0",
-  "description": "Express and MongoDB app ready for MongoDB Atlas and GitHub Actions deployment.",
+  "description": "Express, Passport, EJS, and MongoDB Atlas app ready for Render deployment.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
