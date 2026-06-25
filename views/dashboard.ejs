@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <%- include("partials/header") %>
+
+    <main class="container">
+      <section class="panel">
+        <p class="eyebrow">Private page</p>
+        <h1>Welcome, <%= currentUser.username %>.</h1>
+        <p class="muted">Your account was loaded from MongoDB through Passport session authentication.</p>
+
+        <dl class="details">
+          <div>
+            <dt>Email</dt>
+            <dd><%= currentUser.email %></dd>
+          </div>
+          <div>
+            <dt>User ID</dt>
+            <dd><%= currentUser._id %></dd>
+          </div>
+        </dl>
+
+        <form action="/logout" method="POST">
+          <button class="button secondary" type="submit">Logout</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

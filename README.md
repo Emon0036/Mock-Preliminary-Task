@@ -26,6 +26,9 @@ The app listens on `PORT` or `8080` and exposes:
 
 - `GET /` - basic response
 - `GET /health` - database health check
+- `GET /register` - registration form
+- `GET /login` - login form
+- `GET /dashboard` - protected page
 
 ## MongoDB Atlas setup
 
@@ -65,6 +68,7 @@ Add these GitHub repository secrets in `Settings > Secrets and variables > Actio
 | `SERVER_HOST` | Yes | VPS IP address or hostname |
 | `SERVER_USER` | Yes | SSH user on the VPS |
 | `SERVER_SSH_KEY` | Yes | Private SSH key allowed to log in as `SERVER_USER` |
+| `SESSION_SECRET` | Yes | Long random value used to sign login sessions |
 | `SERVER_PORT` | No | SSH port, defaults to `22` |
 | `SERVER_APP_DIR` | No | Deploy directory, defaults to `/var/www/mock-preliminary-task` |
 | `APP_PORT` | No | App port, defaults to `8080` |

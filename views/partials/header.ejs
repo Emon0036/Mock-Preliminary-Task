@@ -1,0 +1,15 @@
+<header class="site-header">
+  <a class="brand" href="/">Mock Preliminary</a>
+
+  <nav class="nav">
+    <% if (isAuthenticated) { %>
+      <a href="/dashboard">Dashboard</a>
+      <form action="/logout" method="POST">
+        <button class="link-button" type="submit">Logout</button>
+      </form>
+    <% } else { %>
+      <a href="/login">Login</a>
+      <a class="button button-small" href="/register">Register</a>
+    <% } %>
+  </nav>
+</header>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <%- include("partials/header") %>
+
+    <main class="container narrow">
+      <section class="panel">
+        <h1>Login</h1>
+        <p class="muted">Use your registered username and password.</p>
+
+        <% if (message) { %>
+          <p class="alert success"><%= message %></p>
+        <% } %>
+
+        <% if (error) { %>
+          <p class="alert error"><%= error %></p>
+        <% } %>
+
+        <form class="form" action="/login" method="POST">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" autocomplete="username" value="<%= form.username || "" %>" required>
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+          <button class="button" type="submit">Login</button>
+        </form>
+
+        <p class="muted center">Need an account? <a href="/register">Register</a></p>
+      </section>
+    </main>
+  </body>
+</html>

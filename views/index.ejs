@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <%- include("partials/header") %>
+
+    <main class="container">
+      <section class="panel">
+        <p class="eyebrow">Authentication demo</p>
+        <h1>Login and registration are connected to MongoDB.</h1>
+        <p class="muted">Database status: <strong><%= database %></strong></p>
+
+        <div class="actions">
+          <% if (isAuthenticated) { %>
+            <a class="button" href="/dashboard">Open Dashboard</a>
+          <% } else { %>
+            <a class="button" href="/register">Create Account</a>
+            <a class="button secondary" href="/login">Login</a>
+          <% } %>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
